@@ -1,0 +1,114 @@
+ body {
+    margin: 0;
+    padding: 0;
+   min-height: 100vh;
+display: flex;
+justify-content: center;
+padding: 40px 0;
+align-items: flex-start;    
+    background-color: #F8F9FA;
+
+    font-family: ui-sans-serif, system-ui, sans-serif, 
+                 "Apple Color Emoji", "Segoe UI Emoji", 
+                 "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+}
+button{
+    font-family: inherit;
+}
+
+.welcome {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    
+    height:auto;
+    border-radius: 16px;
+    background-color: #ffffff;       
+    padding: 32px 24px;
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08); 
+}
+#logo {
+    display: block;
+    margin: 0 auto 16px auto;
+    width: 80px;             
+    height: 80px;
+    padding-top:40px;
+}
+#create {
+    margin-top: 8px;
+    color: #6c757d;
+    font-size: 1rem;
+}
+[data-tab-content]{
+    display:none;
+
+}
+.active[data-tab-content]{
+    display:block;
+}
+
+.tabs {
+    width: 100%;
+    background-color: #F3F4F6;
+    padding: 4px;
+    border-radius: 12px;   
+    display: flex;
+    gap: 4px;
+    list-style: none;
+    margin: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+.tabs li {
+    flex: 1;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color:transparent;
+}
+.tabs li.active {
+    background-color: white ;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.tabs,
+.tab-content {
+    align-self: stretch; 
+}
+.terms{
+    
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+   
+   
+}
+.terms p {
+     margin:0;
+      color: #6c757d;
+}
+#task{
+    font-weight:500;
+    font-size:18px;
+}
+.terms a{
+    color:  #2367FC;
+}
+
+
+

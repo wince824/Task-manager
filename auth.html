@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "assets/cs/global.css">
+    <script src = "assets/js/main.js" defer ></script>
+    
+</head>
+<body>
+    <div class = "card">
+        <svg id="logo" xmlns="http://www.w3.org/2000/svg">
+      <image height="80" width="80" href="/assets/logo.svg" />
+    </svg>
+        <p  class = "welcome">Welcome Back !</p>
+        <p id = "create">Enter your details to access your account</p>
+        <br>
+        <ul class="tabs">
+            <li data-tab-target="#login" >Login</li>
+             <li data-tab-target="#signup">SignUp</li>
+        </ul>
+        <div class = "tab-content">
+            <div id = "login" data-tab-content class="active">
+               <iframe src="/module/login/login.html" width="100%" height="320px" frameborder="0" class = "sign-up-component"></iframe>
+            </div>
+            <div id = "signup" data-tab-content>
+                
+                 <iframe src="/module/signup/signup.html" width="100%" height="450px" frameborder="0" class = "sign-up-component"
+                 ></iframe>
+            </div>
+
+        </div>
+         <div class = "terms">
+            
+             <p id="agree">
+    By continuing, you agree to our 
+    <a href="/terms-of-service.html">Terms of Service</a> & 
+    <a href="/privacy-policy.html">Privacy Policy</a>
+  </p>
+  <p id = "task">© 2024 TaskMaster | Made for University Students</p>
+        </div>
+        
+        
+    </div>
+</body>
+</html>
