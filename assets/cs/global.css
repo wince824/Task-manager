@@ -104,6 +104,41 @@ body::before {
     pointer-events: none;
     background-color:none;
 }
+.blurred-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px); 
+    z-index: 1;
+    
+    
+}
+
+.shape-1.blurred-orb {
+    background-color:rgb(117, 117, 228); 
+    top: 35%; 
+    left: 7%; 
+    width: 80px;
+    height: 80px;
+    animation: pulseFlicker 20s linear infinite; 
+}
+.shape-2.blurred-orb {
+    background-color:#6291ca; 
+    top: 70%; 
+    left: 10%; 
+    width: 60px;
+    height: 60px;
+    animation: pulseFlicker 10s linear infinite; 
+}
+
+.shape-3.blurred-orb {
+    background-color: #f5df87; 
+    top: 10%;
+    right: 5%;
+    width: 80px;
+    height: 80px; 
+    animation: pulseFlicker 12s linear infinite 2s; 
+}
+
 
 @keyframes float-circle {
     0%, 100% { transform: translate(0, 0) rotate(0deg); }
@@ -114,6 +149,7 @@ body::before {
     0%, 100% { transform: translateY(0) rotate(0deg); }
     50% { transform: translateY(-40px) rotate(5deg); }
 }
+
 button{
     font-family: inherit;
 }
