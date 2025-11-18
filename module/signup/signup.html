@@ -9,23 +9,39 @@
     <script src = "signup.js" defer ></script>
 </head>
 <body>
-     <form action="/action_page.php" class = "sign-up-form">
+     <form action="/index.html" class = "sign-up-form">
         <div class = "label">
         <label for="fname" id="full-name">Full Name* </label><br>
-        <input type="fname"  name="fname" placeholder="John Doe"><br>
-        </div>
+        <div class = "input">
+
+       <input type="fname"  name="fname" placeholder="John Doe"><br>
+       
+        <img src="/assets/user.svg">
+         </div>
+          </div>
         <div class = "label">
         <label for="email">Email Address*</label><br>
+         <div class = "input">
         <input type="email" id="email" name="email" placeholder="hello@example.com"><br>
-</div>
+
+<img src="/assets/email.svg">
+         </div>
+         </div>
 <div class = "label">
         <label for="password">Password*</label><br>
-        <input type="password" id="password" name="password" placeholder="123456">
-        <p id = "password">Password must be at least 6 characters long</p>
-</div>
+         <div class = "input">
+        <input type="password" id="password" name="password" placeholder="••••••••">
+        <img src="/assets/lock.svg">
+        </div>
+         <p id = "password">Password must be at least 6 characters long</p>
+         </div>
 <div class = "label">
         <div class="login-buttons">
-            <button type="button" class="buttons" id="help">Help?</button>
+            <button type="button" class="buttons help-btn" id="help">
+                  <img src="/assets/question.svg" class="help-icon">
+                    Help?
+
+                       </button>
             <button type="submit" class="buttons" id="create">Create Account</button>
         </div>
         </div>

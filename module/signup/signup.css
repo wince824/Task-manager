@@ -71,4 +71,42 @@ input {
     font-weight:300;
     color:gray;
 }
+.input{
+    position:relative;
+    width: 100%;
+}
+.input img{
+      position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    
+    
+}
+.button-wrap{
+    position:relative;
+}
+.button-wrap img{
+   position:absolute;
+   
+}
+.help-btn {
+    display: flex;
+   gap: 6px;     
+ padding-left:80px;
+
+    
+   
+}
+
+
+.help-btn .help-icon {
+    width: 18px;
+    height: 18px;
+    pointer-events: none; 
+    
+} 
+
 
