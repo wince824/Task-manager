@@ -1,17 +1,118 @@
- body {
+
+body {
     margin: 0;
     padding: 0;
-   min-height: 100vh;
-display: flex;
-justify-content: center;
-padding: 40px 0;
-align-items: flex-start;    
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    align-items: flex-start;    
     background-color: #F8F9FA;
-
     font-family: ui-sans-serif, system-ui, sans-serif, 
                  "Apple Color Emoji", "Segoe UI Emoji", 
                  "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 16px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("../waves.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    opacity: 0.3;
+    animation: wave-fade 3s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes wave-fade {
+    0% { opacity: 0.2; }
+    100% { opacity: 0.4; }
+}
+
+
+.triangle-animation {
+    position: absolute;
+    bottom: 50%;
+    right: 25%;
+    width: 100px;
+    height: 120px;
+    background-image: url("../triangle.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@keyframes float-triangle {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(10deg); }
+}
+
+
+.kite-animation {
+    position: absolute;
+    top: 15%;
+    fill:"#49DFB0";
+    right: 20%;
+    width: 60px;
+    height: 60px;
+    background-image: url("../kite.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    animation: bounce-kite 3s ease-in-out infinite;
+    pointer-events: none;
+        filter: brightness(0) saturate(100%) invert(79%) sepia(32%) saturate(1280%) hue-rotate(106deg) brightness(96%) contrast(89%);
+
+}
+
+
+.circle-animation {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    width: 80px;
+    height: 80px;
+    background-image: url("../circle.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+    background-color:none;
+}
+.blue-circle {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 50px;
+    height: 50px;
+    background-image: url("../blue-circle.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+    background-color:none;
+}
+
+@keyframes float-circle {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-20px, -20px) rotate(15deg); }
+}
+
+@keyframes bounce-kite {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-40px) rotate(5deg); }
 }
 button{
     font-family: inherit;
