@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    padding:  0;
+    align-items: flex-start;    
+    background-color: #F8F9FA;
+    font-family: ui-sans-serif, system-ui, sans-serif, 
+                 "Apple Color Emoji", "Segoe UI Emoji", 
+                 "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    position: relative;
+    overflow-x: hidden;
+}
+.sidebar{
+    position:left;
+    background-color:#FFFFFF;
+    padding-top:0;
+    width: 400px;
+    height:100vh;
+    
+}

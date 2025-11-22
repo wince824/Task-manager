@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    padding:  0;
+    align-items: flex-start;    
+    background-color: #F8F9FA;
+    font-family: ui-sans-serif, system-ui, sans-serif, 
+                 "Apple Color Emoji", "Segoe UI Emoji", 
+                 "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    position: relative;
+    overflow-x: hidden;
+}
+.sidebar-area{
+    padding-top:0;
+}
+
+.first-part{
+    font-weight: bold;
+    font-size:40px;
+     padding-left:60px;
+}
+
+.second-part{
+    padding-top:20px;
+    padding-bottom: 20px;
+     padding-left:60px;
+}
+.last-part{
+    display: flex;
+    flex-direction:column;
+    gap: 15px;
+    font-weight: 500;
+    padding-top:10px;
+    padding-bottom:200px;
+     padding-left:60px;
+     
+}
+.log-out{
+    font-weight:500;
+    color:#C10007;
+    padding-top:20px;
+     padding-left:60px;
+}
