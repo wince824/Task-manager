@@ -1,38 +1,65 @@
 <link rel="stylesheet" href="/module/sidebar/sidebar.css" />
 <section class="sidebar-area">
-    <div class = "first-part">
-        <p>TaskMaster</p>
+    <div class="header">
+        <div class="app-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
+          viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" 
+          stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-check-big">
+          <path d="M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344"/>
+          <path d="m9 11 3 3L22 4"/></svg>
+
+        </div>
+        <h1 class="app-name">TaskMaster</h1>
+        <button class="back-button">
+            <!-- Back arrow icon goes here -->
+        </button>
     </div>
     <hr>
-    <div class = "second-part">
-        <p> name of the signed in person</p>
-    </div>
-    <hr>
-    <div class = "last-part">
-        <div class = "dashboard">
-            Dashboard
+    
+    <div class="user-profile">
+        <div class="user-avatar">
+            <!-- User avatar icon goes here -->
+            <span class="avatar-letter">W</span>
         </div>
-        <div class = "task">
-            Tasks
-        </div>
-        <div class = "community">
-            Community
-        </div>
-        <div class = "expense">
-            Expenses
-        </div>
-        <div class = "notes">
-            Notes
-        </div>
-        <div class = "settings">
-            Settings
+        <div class="user-info">
+            <!-- actual name of the signed in person -->
+            <h2 class="user-name">wince</h2>
+            <p class="user-email">wince@gmail.com</p>
         </div>
     </div>
-    <hr>
-    <div class = "log-out">
-        Logout
+    
+    <nav class="navigation">
+        <a href="#" class="nav-item active">
+            <span class="nav-icon"><!-- Dashboard icon --></span>
+            <span class="nav-text">Dashboard</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="nav-icon"><!-- Tasks icon --></span>
+            <span class="nav-text">Tasks</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="nav-icon"><!-- Community icon --></span>
+            <span class="nav-text">Community</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="nav-icon"><!-- Expenses icon --></span>
+            <span class="nav-text">Expenses</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="nav-icon"><!-- Notes icon --></span>
+            <span class="nav-text">Notes</span>
+        </a>
+        <a href="#" class="nav-item">
+            <span class="nav-icon"><!-- Settings icon --></span>
+            <span class="nav-text">Settings</span>
+        </a>
+    </nav>
+    
+    <div class="logout-container">
+        <a href="www.emmsdan.com" class="logout-button">
+            <span class="logout-icon"><!-- Logout icon --></span>
+            <span class="logout-text">Logout</span>
+        </a>
     </div>
-   
 </section>
-<script src="/module/sidebar/sidebar.js">
-</script>
+<script src="/module/sidebar/sidebar.js"></script>

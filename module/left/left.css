@@ -1,0 +1,15 @@
+
+.main-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-part {
+    background-color: red;
+    height: 200px;
+}
+
+.lower-part {
+    background-color: blue;
+    height: 200px;
+}
