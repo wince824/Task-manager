@@ -7,7 +7,10 @@ const myTaskBtn = document.querySelector('.my-task button');
 const summaryBtn = document.querySelector('.summary button');
 const taskContent = document.querySelector('.task-head').parentElement;
 const aiSummaryContent = document.getElementById('aiSummaryContent');
-
+const latestBtn = document.querySelector('.latest button');
+const historyBtn = document.querySelector('.history button');
+const box1 = document.querySelector('.box1'); 
+const box2 = document.querySelector('.box2');  
 
 myTaskBtn.addEventListener('click', () => {
     myTaskBtn.classList.add('active');
@@ -61,4 +64,21 @@ taskForm.addEventListener('submit', (e) => {
     console.log('New task created:', task);
     alert('Task created successfully!');
     closeModal();
+});
+box2.style.display = 'none';
+
+latestBtn.addEventListener('click', () => {
+    latestBtn.classList.add('active');
+    historyBtn.classList.remove('active');
+
+    box1.style.display = 'flex';
+    box2.style.display = 'none';
+});
+
+historyBtn.addEventListener('click', () => {
+    historyBtn.classList.add('active');
+    latestBtn.classList.remove('active');
+
+    box1.style.display = 'none';
+    box2.style.display = 'flex';
 });
