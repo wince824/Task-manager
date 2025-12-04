@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+   <link rel="stylesheet" href="/module/taskscontent/taskcontent.css" /> 
+</head>
+<body>
+    <div class="content-card">
+        <div class="header">
+            <div class="title">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
+                    viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" 
+                    stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344"/>
+                        <path d="m9 11 3 3L22 4"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="words">Task Management</p>
+                    <p class="manage">Manage and track your tasks</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="tabs-content">
+                <div class="my-task">
+                    <button class="active">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        My Tasks
+                    </button>
+                </div>
+                <div class="summary">
+                    <button>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                        AI Summary
+                    </button>
+                </div>
+            </div>
+        </div>
+ <div id = "mytask">
+        <div class="task-head">
+            <div class="stats">
+                <div class="zero">
+                    <h1>0</h1>
+                    <span>Active tasks</span>
+                </div>
+                <div class="arrow">|</div>
+                <div class="complete">
+                    <h1 style="color: green;">0</h1>
+                    <span>Completed</span>
+                </div>
+            </div>
+            <button class="add-task" id="addTaskBtn">+ Add Task</button>
+        </div>
+
+        <div class="empty-box">
+            <div class="empty-circle"></div>
+            <p>No tasks yet</p>
+            <span>Click "Add Task" to create your first task</span>
+        </div>
+    </div>
+    <div class="ai-summary-content" id="aiSummaryContent" style="display: none;">
+    <div class="ai-summary-header">
+        <div>
+            <h2 class="ai-summary-title">AI-Powered Task Summary</h2>
+            <p class="ai-summary-subtitle">Get insights and recommendations for your tasks</p>
+        </div>
+        <button class="btn btn-primary generate-btn" disabled>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            Generate New
+        </button>
+    </div>
+
+    <div class="summary-tabs">
+        <button class="summary-tab active">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            Latest Summary
+        </button>
+        <button class="summary-tab">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            History (0)
+        </button>
+    </div>
+
+    <div class="empty-summary">
+        <div id = "box1">
+        <svg class="empty-summary-icon" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="1.5">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+        </svg>
+        <p class="empty-summary-text">No summary generated yet</p>
+        <span class="empty-summary-hint">Click "Generate New" to get AI-powered insights</span>
+    </div>
+    <div id = "box2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+        <p class="empty-summary-text">No summary history</p>
+        <span class="empty-summary-hint">Generate summaries to build up your history</span>
+    </div>
+    </div>
+</div>
+
+    </div>
+  
+
+
+   
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="close-btn" id="closeBtn">×</button>
+            
+            <div class="modal-header">
+                <svg class="modal-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 5v14M5 12h14"/>
+                </svg>
+                <h2 class="modal-title">Create New Task</h2>
+            </div>
+            <p class="modal-subtitle">Add a new task to your productivity list</p>
+
+            <form id="taskForm">
+                <div class="form-group">
+                    <label class="form-label">Title</label>
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            class="form-input" 
+                            placeholder="Enter task title"
+                            id="taskTitle"
+                            required
+                        />
+                        <svg class="ai-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea 
+                        class="form-textarea" 
+                        placeholder="Add task details..."
+                        id="taskDescription"
+                    ></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Priority</label>
+                        <select class="form-select" id="taskPriority">
+                            <option value="low">Low</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Due Date</label>
+                        <input 
+                            type="date" 
+                            class="form-input" 
+                            id="taskDueDate"
+                        />
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-cancel" id="cancelBtn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Create Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/module/taskscontent/taskcontent.js">
+
+             </script> 
+</body>
+</html>
